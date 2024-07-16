@@ -1,0 +1,162 @@
+:root {
+  /* VARIABLES */
+  --thread-post-width: 150px;
+  --thread-post-height: 250px;
+}
+
+body {
+  font-family: arial, helvetica, sans-serif;
+  padding: 3px;
+  background-color: #e3e7f8;
+}
+
+.wrapper-main {
+  margin: 0 auto;
+}
+
+.banner {
+  text-align: center;
+}
+.banner img {
+  max-width: 40%;
+}
+.banner h2 {
+  font-size: 75%;
+}
+
+/* vvv ensures that all labels are aligned and same width */
+.form-group label {
+  display: inline-block;
+  width: 75px; /* Adjust the width as needed */
+  text-align: left;
+  margin-right: 10px;
+}
+.form-group textarea {
+  width: 200px;
+}
+#img-url-bar {
+  width: 200px;
+}
+
+/* navigation buttons like top, bottom, sort */
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.options ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.options li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.options a {
+  text-decoration: none;
+  font-size: 90%;
+}
+.options a:visited {
+  color: blue;
+}
+.options a:hover {
+  color: red;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+/* thread-posts are the container for the teaser, 
+they link to a thread from catalog vvv */
+.thread-post {
+  width: var(--thread-post-width);
+  margin: 10px;
+  text-align: center;
+
+  max-height: var(--thread-post-height);
+
+  overflow: hidden;
+}
+/* thumbnail vvv */
+.thread-post img {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  max-width: var(--thread-post-width);
+  max-height: 150px;
+  /* max-height: calc(var(--thread-post-height) / 1.5); */
+}
+/* vvv the text displayed in an individual thread-post in catalog */
+.teaser {
+  font-size: 10pt;
+  /* max-height: var(--thread-post-height); */
+  word-wrap: break-word;
+}
+/*  0)_(0  **licks you** */
+/* POSTS in THREADS! */
+.thread {
+  display: flex;
+  flex-direction: column;
+}
+.post-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.reply-arrows {
+  color: #9a9da8;
+  margin-right: 2px;
+  margin-left: 2px;
+  padding-top: 6px;
+}
+
+.img-and-text-wrapper {
+}
+
+/* vvv posts that aren't the OP (first post) */
+.post-reply {
+  background-color: #d6daf0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.post-img-header {
+  padding-bottom: 2px;
+  padding-top: 2px;
+  font-size: 10pt;
+}
+.post-user-information {
+  padding-bottom: 2px;
+  font-size: 10pt;
+}
+.username {
+  color: #2c845a;
+}
+.post-thumbnail {
+  max-width: 125px;
+  max-height: 125px;
+  float: left;
+  margin-right: 10px;
+}
+.post-message {
+  font-size: 10pt;
+}
+
+/* DESKTOP style, screens > 800 pixels ;) */
+@media (min-width: 800px) {
+  .banner h2 {
+    font-size: 1.5em;
+  }
+
+  .form-group textarea {
+    width: 500px;
+  }
+
+  .post-container {
+    max-width: 75%;
+  }
+}

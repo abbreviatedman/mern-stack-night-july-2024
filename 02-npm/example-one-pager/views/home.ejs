@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY APP</h1>
+
+    <form action="/search" method="GET">
+        <input type="text" name="search" placeholder="search for a ___">
+        <button>Search</button>
+    </form>
+
+    <% if(data.length > 0) { %>
+        <% data.forEach((drink, index) => { %>
+            <h1>Name: <%=drink.strDrink%></h1>
+            <br>
+            <img src="<%=drink.strDrinkThumb%>" alt="">
+            <ul>
+                Ingredients:
+                <% for(let i = 1; i < 15; i++) { %>
+                    <p><%=drink[`strIngredient${i}`]%></p>
+                <% } %>
+            </ul>
+        <% }) %>
+    <% } %>
+</body>
+</html>

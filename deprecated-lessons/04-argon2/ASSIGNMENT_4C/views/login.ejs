@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head") %>
+<body>
+    <div class="wrapper-main">
+        <%- include("./partials/top-nav") %>
+    </div>
+
+    <div class="banner">
+        <img src="images/kirby-eat.gif">
+        <h2>WELCOME TO AARON'S MAGIC IMAGEBOARD!</h2>
+
+    </div>
+    <hr>
+
+    <h4>Login</h4>
+    <!-- #15: Make a login form with action="/user/login" -->
+    <form action="/user/login" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+
+    <%- include("./partials/footer") %>
+</body>
+</html>

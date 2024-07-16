@@ -1,0 +1,7 @@
+# AWS: DynamoDB
+
+---
+
+## Objectives:
+
+- ***

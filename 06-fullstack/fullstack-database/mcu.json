@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Iron Man",
+    "debutFilm": "Iron Man",
+    "debutYear": 2008
+  },
+  {
+    "name": "Captain America",
+    "debutFilm": "Captain America: The First Avenger",
+    "debutYear": 2011
+  },
+  {
+    "name": "Thor",
+    "debutFilm": "Thor",
+    "debutYear": 2011
+  },
+  {
+    "name": "Hulk",
+    "debutFilm": "The Avengers",
+    "debutYear": 2012
+  },
+  {
+    "name": "Black Widow",
+    "debutFilm": "Iron Man 2",
+    "debutYear": 2010
+  },
+  {
+    "name": "Hawkeye",
+    "debutFilm": "Thor",
+    "debutYear": 2011
+  },
+  {
+    "name": "Scarlet Witch",
+    "debutFilm": "Avengers: Age of Ultron",
+    "debutYear": 2015
+  },
+  {
+    "name": "Vision",
+    "debutFilm": "Avengers: Age of Ultron",
+    "debutYear": 2015
+  },
+  {
+    "name": "Spider-Man",
+    "debutFilm": "Captain America: Civil War",
+    "debutYear": 2016
+  },
+  {
+    "name": "Doctor Strange",
+    "debutFilm": "Doctor Strange",
+    "debutYear": 2016
+  },
+  {
+    "name": "Black Panther",
+    "debutFilm": "Captain America: Civil War",
+    "debutYear": 2016
+  },
+  {
+    "name": "Ant-Man",
+    "debutFilm": "Captain America: Civil War",
+    "debutYear": 2016
+  },
+  {
+    "name": "Captain Marvel",
+    "debutFilm": "Captain Marvel",
+    "debutYear": 2019
+  },
+  {
+    "name": "The Wasp",
+    "debutFilm": "And-Man and the Wasp",
+    "debutYear": 2018
+  },
+  {
+    "name": "Falcon",
+    "debutFilm": "Captain America: The Winter Soldier",
+    "debutYear": 2014
+  },
+  {
+    "name": "War Machine",
+    "debutFilm": "Iron Man 2",
+    "debutYear": 2014
+  },
+  {
+    "name": "Valkyrie",
+    "debutFilm": "Thor: Love and Thunder",
+    "debutYear": 2022
+  },
+  {
+    "name": "Winter Soldier",
+    "debutFilm": "Captain America: The Winter Soldier",
+    "debutYear": 2014
+  },
+  {
+    "name": "Okoye",
+    "debutFilm": "Black Panther",
+    "debutYear": 2018
+  }
+]

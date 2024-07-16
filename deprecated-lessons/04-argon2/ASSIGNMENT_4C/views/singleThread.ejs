@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head") %>
+
+<body>
+    <div class="wrapper-main">
+        <%- include("./partials/top-nav") %>
+
+        <div class="banner">
+            <img src="../images/kirby-eat.gif">
+            <h2>THREAD: <%=thread.title%></h2>
+
+        </div>
+        <hr>
+
+        <!-- container for the CREATE NEW THREAD form -->
+        <div class="new-thread">
+
+            <form action="/api/threads/createPostInThread/<%=thread.threadNo%>" method="post">
+
+                <div class="form-group">
+                    <label for="username">Name</label>
+                        <!-- #24: If logged in, make the placeholder & value the username. If logged out, use the original input -->
+                        <input type="text" id="username" name="username" placeholder="anonymous" value="anonymous" readonly disabled>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="content">Comment</label>
+                    <textarea id="content" name="content" rows="4" cols="50"></textarea>
+                </div>
+                
+                <br>
+
+                <div class="form-group">
+                    <label for="img">Img URL</label>
+                    <input type="text" id="img-url-bar" name="img" placeholder="https://i.imgur.com/QFw4xCI.jpeg" value="https://i.imgur.com/QFw4xCI.jpeg">
+                </div>
+
+                <br>
+
+                <input type="submit" value="Post Reply">
+            </form>
+        </div>
+        <hr>
+
+        <%- include("./partials/options-nav") %>
+
+        <div class="thread">
+
+            <%thread.posts.forEach( (post) => { %>    
+                <div class="post-container">
+                    <div class="reply-arrows">>></div>
+                    <div class="img-and-text-wrapper post-reply">
+
+                        <div class="post-user-information">
+                            <span class="username"><%=post.username%></span>
+                            <!-- <span class="date">04/08/24(Mon)</span> -->
+                            <span class="date"> <%=post.createdAt%></span>
+                            <span class="postNo"> No.<%=post.postNo%></span>
+                        </div>
+
+                        <% if (post.img) {%>
+                            <div class="post-img-header">
+                                File: <span><a href="<%=post.img%>" target="_blank">
+                                    <%
+                                        // vv regex to remove most of url from link
+                                        let fileName = post.img.replace(/.*\//, '');
+                                    %>
+                                    <%=fileName%>
+                                </a></span><span> (??? KB, WidthxHeight)    
+                            </div>
+
+                            <img src="<%=post.img%>" class="post-thumbnail">
+                        <%}%>
+                        <blockquote class="post-message"><%=post.textContent%></blockquote>
+
+                    </div>
+                </div>
+
+            <%});%>
+
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+<%- include("./partials/footer") %>
+
+

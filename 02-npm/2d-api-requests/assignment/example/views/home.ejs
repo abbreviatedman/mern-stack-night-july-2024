@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACNH App</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .card{
+            border: 1px solid black
+        }
+
+        .profileImg {
+            border: 2px solid;
+            border-radius: 50%;
+        }
+
+        .saying {
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browse through all Animal Crossing: New Horizon villagers!</h1>
+    <!-- <h2>this shows only one villager's data: <%= villagers[1].name["name-USen"] %> </h2> -->
+    <ul>
+        <% villagers.forEach((villager) => { %>
+            <div class="card" style="background-color:<%=villager['text-color']%>;">
+                <img src="<%=villager.icon_uri%>" alt="profile icon" class="profileImg" style="border-color:<%=villager['bubble-color']%>;">
+                <p><%= villager.name["name-USen"] %></p>
+                <p>Birthday: <%= villager["birthday-string"] %> </p>
+                <img src="<%=villager.image_uri%>" alt="selfie">
+                <p class="saying" >"<%=villager.saying%>"</p>
+            </div>
+        <% }) %>
+    </ul>
+</body>
+</html>
