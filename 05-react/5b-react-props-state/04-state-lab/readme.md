@@ -16,7 +16,7 @@ In this exercise we will be building a task list that will allow users to write 
 
 ## Exercise Assets
 
-4. Move the image files from the _/assets\*\* folder outside the create-react-app project folder into the create-react-app folder _/public/\*\* this way the images will be accessible to your application.
+4. Move the image files from the `assets` folder outside the create-react-app project folder into the create-react-app folder `public`—this way the images will be accessible to your application.
 
 ## Install Bootstrap
 

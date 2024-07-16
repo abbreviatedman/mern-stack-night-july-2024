@@ -28,7 +28,7 @@ We are going to make an archive page for a blog site that displays a list of rec
 
 ## Exercise Assets
 
-7. Move the image files from the _/assets\*\* folder outside the create-react-app project folder into the create-react-app folder _/public/\*\* this way the images will be accessible to your application.
+7. Move the image files from the current folder outside the create-react-app project folder into the create-react-app folder `public`—this way the images will be accessible to your application.
 
 ## Creating the App Component
 
