@@ -75,7 +75,7 @@ The render method of ReactDOM is being passed our `<App />` component. The `<Rea
 
 ## Applying CSS Classes
 
-15. Erase the text "Hello World" from inside the render method. Add the attribute `className=""` inside the `<div>` and give it the Bootstrap class name of `container-fluid`.
+15. Erase the text "Hello World" from inside the return value. Add the attribute `className=""` inside the `<div>` and give it the Bootstrap class name of `container-fluid`.
 
 ```jsx
 function App() {

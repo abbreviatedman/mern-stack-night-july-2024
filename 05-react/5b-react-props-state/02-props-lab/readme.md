@@ -139,7 +139,7 @@ export default App;
 
 ## Adding Prop Data
 
-22. Now that we know our App component can see our Article component, let's add some made up dummy data. This data often comes from a database, but for now we are just going to add it as a property of our component to make things simple. On `App.js`, inside your function before the render method paste in the following code:
+22. Now that we know our App component can see our Article component, let's add some made up dummy data. This data often comes from a database, but for now we are just going to add it as a property of our component to make things simple. On `App.js`, inside your function, before the return statement, paste in the following code:
 
 ```javascript
 articles = [
