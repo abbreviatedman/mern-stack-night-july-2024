@@ -6,7 +6,7 @@
 
 In this exercise we will be building a task list that will allow users to write a list of things they want to remember to do. They should be able to add new items and remove existing items from the list. They should be able to set an importance level: low, medium, or high and this should effect the background color of each task.
 
-## Setup a new Create-React-App project
+## Set up a new Create-React-App project
 
 1. Open VS code and then open your terminal from the menus at the top of the screen under `View > Terminal` or use the shortcut key **Ctrl+`**.
 
