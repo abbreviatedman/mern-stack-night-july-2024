@@ -25,10 +25,10 @@
 
 // Test code here. Do not modify the below code.
 const assert = require("assert");
-const { describe, it } = require("node:test");
+const { describe, test } = require("node:test");
 
 describe("getFirstElement", () => {
-  it(`returns the first element of the array`, () => {
+  test(`returns the first element of the array`, () => {
     assert.deepStrictEqual(
       getFirstElement([1, 2, 3]),
       1,
@@ -44,7 +44,7 @@ describe("getFirstElement", () => {
 });
 
 describe("getLastElement", () => {
-  it(`returns the last element of the array`, () => {
+  test(`returns the last element of the array`, () => {
     assert.deepStrictEqual(
       getLastElement([1, 2, 3]),
       3,
@@ -60,7 +60,7 @@ describe("getLastElement", () => {
 });
 
 describe("reverseWithoutMutation", () => {
-  it(`returns a new array with the elements in reverse order`, () => {
+  test(`returns a new array with the elements in reverse order`, () => {
     const originalArray1 = [1, 2, 3];
     const reversedArray1 = reverseWithoutMutation(originalArray1);
     const originalArray2 = ["a", "b", "c"];
@@ -93,7 +93,7 @@ describe("reverseWithoutMutation", () => {
 });
 
 describe("sortByLength", () => {
-  it(`returns a new array with the strings sorted by length, from shortest to longest`, () => {
+  test(`returns a new array with the strings sorted by length, from shortest to longest`, () => {
     const originalArray1 = ["aaa", "aa", "a"];
     const sortedArray1 = sortByLength(originalArray1);
     const originalArray2 = ["t-rex", "brachiosaurus", "stegosaurus"];
@@ -126,7 +126,7 @@ describe("sortByLength", () => {
 });
 
 describe("getFirstMatch", () => {
-  it(`returns the first element in the array that includes the string`, () => {
+  test(`returns the first element in the array that includes the string`, () => {
     assert.deepStrictEqual(
       getFirstMatch(["apple", "banana", "cherry"], "a"),
       "apple",
@@ -148,7 +148,7 @@ describe("getFirstMatch", () => {
 });
 
 describe("getAllMatches", () => {
-  it(`returns a new array with all elements in the array that include the string`, () => {
+  test(`returns a new array with all elements in the array that include the string`, () => {
     assert.deepStrictEqual(
       getAllMatches(["apple", "banana", "cherry"], "a"),
       ["apple", "banana"],
