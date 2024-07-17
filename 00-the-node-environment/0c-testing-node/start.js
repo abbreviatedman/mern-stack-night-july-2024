@@ -156,124 +156,124 @@ describe("giveBirthday", function () {
   });
 });
 
-describe('addHobby', function () {
-  it('is a function', function () {
+describe("addHobby", function () {
+  it("is a function", function () {
     assert.deepStrictEqual(
       typeof addHobby,
-      'function',
-      'addHobby should be a function'
-    )
-  })
+      "function",
+      "addHobby should be a function"
+    );
+  });
 
-  it('adds a hobby to the hobbies array', function () {
+  it("adds a hobby to the hobbies array", function () {
     const examplePerson1 = {
-      hobbies: ['fishing', 'hiking']
-    }
+      hobbies: ["fishing", "hiking"],
+    };
 
     const examplePerson2 = {
-      hobbies: ['diving', 'hiking', 'camping']
-    }
+      hobbies: ["diving", "hiking", "camping"],
+    };
 
-    addHobby(examplePerson1, 'camping')
+    addHobby(examplePerson1, "camping");
     assert.deepStrictEqual(
       examplePerson1.hobbies,
-      ['fishing', 'hiking', 'camping'],
-      'addHobby should add a hobby to the hobbies array'
-    )
+      ["fishing", "hiking", "camping"],
+      "addHobby should add a hobby to the hobbies array"
+    );
 
-    addHobby(examplePerson2, 'fishing')
+    addHobby(examplePerson2, "fishing");
     assert.deepStrictEqual(
       examplePerson2.hobbies,
-      ['diving', 'hiking', 'camping', 'fishing'],
-      'addHobby should add a hobby to the hobbies array'
-    )
-  })
-})
+      ["diving", "hiking", "camping", "fishing"],
+      "addHobby should add a hobby to the hobbies array"
+    );
+  });
+});
 
-describe('removeHobby', function () {
-  it('is a function', function () {
+describe("removeHobby", function () {
+  it("is a function", function () {
     assert.deepStrictEqual(
       typeof removeHobby,
-      'function',
-      'removeHobby should be a function'
-    )
-  })
+      "function",
+      "removeHobby should be a function"
+    );
+  });
 
-  it('removes a hobby from the hobbies array', function () {
+  it("removes a hobby from the hobbies array", function () {
     const examplePerson1 = {
-      hobbies: ['fishing', 'hiking', 'camping']
-    }
+      hobbies: ["fishing", "hiking", "camping"],
+    };
 
     const examplePerson2 = {
-      hobbies: ['diving', 'hiking', 'camping', 'fishing']
-    }
+      hobbies: ["diving", "hiking", "camping", "fishing"],
+    };
 
-    removeHobby(examplePerson1, 'hiking')
+    removeHobby(examplePerson1, "hiking");
     assert.deepStrictEqual(
       examplePerson1.hobbies,
-      ['fishing', 'camping'],
-      'removeHobby should remove a hobby from the hobbies array'
-    )
+      ["fishing", "camping"],
+      "removeHobby should remove a hobby from the hobbies array"
+    );
 
-    removeHobby(examplePerson2, 'diving')
+    removeHobby(examplePerson2, "diving");
     assert.deepStrictEqual(
       examplePerson2.hobbies,
-      ['hiking', 'camping', 'fishing'],
-      'removeHobby should remove a hobby from the hobbies array'
-    )
-  })
-})
+      ["hiking", "camping", "fishing"],
+      "removeHobby should remove a hobby from the hobbies array"
+    );
+  });
+});
 
-describe('changeAddress', function () {
-  it('is a function', function () {
+describe("changeAddress", function () {
+  it("is a function", function () {
     assert.deepStrictEqual(
       typeof changeAddress,
-      'function',
-      'changeAddress should be a function'
-    )
-  })
+      "function",
+      "changeAddress should be a function"
+    );
+  });
 
-  it('changes the address of the person object', function () {
+  it("changes the address of the person object", function () {
     const examplePerson1 = {
       address: {
-        street: '123 Main St',
-        city: 'Anytown',
-        state: 'NY',
-        zip: '12345'
-      }
-    }
+        street: "123 Main St",
+        city: "Anytown",
+        state: "NY",
+        zip: "12345",
+      },
+    };
 
     const examplePerson2 = {
       address: {
-        street: '456 Elm St',
-        city: 'Othertown',
-        state: 'CA',
-        zip: '54321'
-      }
-    }
+        street: "456 Elm St",
+        city: "Othertown",
+        state: "CA",
+        zip: "54321",
+      },
+    };
 
-    changeAddress(examplePerson1, '789 Maple St', 'Sometown', 'FL', '54321')
+    changeAddress(examplePerson1, "789 Maple St", "Sometown", "FL", "54321");
     assert.deepStrictEqual(
       examplePerson1.address,
       {
-        street: '789 Maple St',
-        city: 'Sometown',
-        state: 'FL',
-        zip: '54321'
+        street: "789 Maple St",
+        city: "Sometown",
+        state: "FL",
+        zip: "54321",
       },
-      'changeAddress should change the address of the person object'
-    )
+      "changeAddress should change the address of the person object"
+    );
 
-    changeAddress(examplePerson2, '987 Oak St', 'Anothertown', 'TX', '67890')
+    changeAddress(examplePerson2, "987 Oak St", "Anothertown", "TX", "67890");
     assert.deepStrictEqual(
       examplePerson2.address,
       {
-        street: '987 Oak St',
-        city: 'Anothertown',
-        state: 'TX',
-        zip: '67890'
+        street: "987 Oak St",
+        city: "Anothertown",
+        state: "TX",
+        zip: "67890",
       },
-      'changeAddress should change the address of the person object'
-    )
-  })
-}
+      "changeAddress should change the address of the person object"
+    );
+  });
+});

@@ -49,8 +49,8 @@ function changeAddress(person, street, city, state, zip) {
     street: street,
     city: city,
     state: state,
-    zip: zip
-  }
+    zip: zip,
+  };
 }
 
 // The code below is NOT TO BE CHANGED.
@@ -189,70 +189,70 @@ describe("giveBirthday", function () {
   });
 });
 
-describe('addHobby', function () {
-  it('is a function', function () {
+describe("addHobby", function () {
+  it("is a function", function () {
     assert.deepStrictEqual(
       typeof addHobby,
-      'function',
-      'addHobby should be a function'
-    )
-  })
+      "function",
+      "addHobby should be a function"
+    );
+  });
 
-  it('adds a hobby to the hobbies array', function () {
+  it("adds a hobby to the hobbies array", function () {
     const examplePerson1 = {
-      hobbies: ['fishing', 'hiking']
-    }
+      hobbies: ["fishing", "hiking"],
+    };
 
     const examplePerson2 = {
-      hobbies: ['diving', 'hiking', 'camping']
-    }
+      hobbies: ["diving", "hiking", "camping"],
+    };
 
-    addHobby(examplePerson1, 'camping')
+    addHobby(examplePerson1, "camping");
     assert.deepStrictEqual(
       examplePerson1.hobbies,
-      ['fishing', 'hiking', 'camping'],
-      'addHobby should add a hobby to the hobbies array'
-    )
+      ["fishing", "hiking", "camping"],
+      "addHobby should add a hobby to the hobbies array"
+    );
 
-    addHobby(examplePerson2, 'fishing')
+    addHobby(examplePerson2, "fishing");
     assert.deepStrictEqual(
       examplePerson2.hobbies,
-      ['diving', 'hiking', 'camping', 'fishing'],
-      'addHobby should add a hobby to the hobbies array'
-    )
-  })
-})
+      ["diving", "hiking", "camping", "fishing"],
+      "addHobby should add a hobby to the hobbies array"
+    );
+  });
+});
 
-describe('removeHobby', function () {
-  it('is a function', function () {
+describe("removeHobby", function () {
+  it("is a function", function () {
     assert.deepStrictEqual(
       typeof removeHobby,
-      'function',
-      'removeHobby should be a function'
-    )
-  })
+      "function",
+      "removeHobby should be a function"
+    );
+  });
 
-  it('removes a hobby from the hobbies array', function () {
+  it("removes a hobby from the hobbies array", function () {
     const examplePerson1 = {
-      hobbies: ['fishing', 'hiking', 'camping']
-    }
+      hobbies: ["fishing", "hiking", "camping"],
+    };
 
     const examplePerson2 = {
-      hobbies: ['diving', 'hiking', 'camping', 'fishing']
-    }
+      hobbies: ["diving", "hiking", "camping", "fishing"],
+    };
 
-    removeHobby(examplePerson1, 'hiking')
+    removeHobby(examplePerson1, "hiking");
     assert.deepStrictEqual(
       examplePerson1.hobbies,
-      ['fishing', 'camping'],
-      'removeHobby should remove a hobby from the hobbies array'
-    )
+      ["fishing", "camping"],
+      "removeHobby should remove a hobby from the hobbies array"
+    );
 
-    removeHobby(examplePerson2, 'diving')
+    removeHobby(examplePerson2, "diving");
     assert.deepStrictEqual(
       examplePerson2.hobbies,
-      ['hiking', 'camping', 'fishing'],
-      'removeHobby should remove a hobby from the hobbies array'
-    )
-  })
-})
+      ["hiking", "camping", "fishing"],
+      "removeHobby should remove a hobby from the hobbies array"
+    );
+  });
+});
