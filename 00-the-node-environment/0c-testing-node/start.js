@@ -18,262 +18,188 @@
 
 // Write a function named `removeHobby` that takes in a person object and a hobby string as arguments. The function should remove the hobby from the person's hobbies array.
 
-// Write a function named `changeAddress` that takes in a person object and four string arguments: street, city, state, and zip. The function should change the person's address to the new address.
-
 // The code below is NOT TO BE CHANGED.
 // This code tests your code above for correctness.
 
 const assert = require("assert");
-const { describe, it } = require("node:test");
+const { describe, test} = require("node:test");
 
-if (typeof fullName === undefined) {
-  fullName = undefined;
-}
+test("removeHobby removes a hobby from the hobbies array", function () {
+  const examplePerson1 = {
+    hobbies: ["fishing", "hiking", "camping"],
+  };
 
-describe("fullName", function () {
-  it("holds a string", function () {
-    assert.deepStrictEqual(
-      typeof fullName,
-      "string",
-      "The variable username either doesn't exist or is not a string."
-    );
-  });
+  const examplePerson2 = {
+    hobbies: ["diving", "hiking", "camping", "fishing"],
+  };
 
-  it("has two words", function () {
-    assert.deepStrictEqual(
-      fullName.split(" ").length,
-      2,
-      "fullName should be a string with two words separated by a space"
-    );
-  });
+  removeHobby(examplePerson1, "hiking");
+  assert.deepStrictEqual(
+    examplePerson1.hobbies,
+    ["fishing", "camping"],
+    "removeHobby should remove a hobby from the hobbies array"
+  );
+
+  removeHobby(examplePerson2, "diving");
+  assert.deepStrictEqual(
+    examplePerson2.hobbies,
+    ["hiking", "camping", "fishing"],
+    "removeHobby should remove a hobby from the hobbies array"
+  );
 });
 
-describe("person", function () {
-  it("is an object", function () {
-    assert.deepStrictEqual(
-      typeof person,
-      "object",
-      "person should be an object"
-    );
-  });
-
-  it("has an email property", function () {
-    assert.deepStrictEqual(
-      typeof person.email,
-      "string",
-      "person should have an email property that is a string"
-    );
-  });
-
-  it("has an age property", function () {
-    assert.deepStrictEqual(
-      typeof person.age,
-      "number",
-      "person should have an age property that is a number"
-    );
-  });
-
-  it("has a hobbies property that is an array", function () {
-    assert.deepStrictEqual(
-      Array.isArray(person.hobbies),
-      true,
-      "person should have an hobbies property that is an array"
-    );
-  });
-
-  it("has an address property", function () {
-    assert.deepStrictEqual(
-      typeof person.address,
-      "object",
-      "person should have an address property that is an object"
-    );
-  });
-
-  it("has a city property", function () {
-    assert.deepStrictEqual(
-      typeof person.address.city,
-      "string",
-      "person should have an address property that has a city property that is a string"
-    );
-  });
-
-  it("has a state property", function () {
-    assert.deepStrictEqual(
-      typeof person.address.state,
-      "string",
-      "person should have an address property that has a state property that is a string"
-    );
-  });
-
-  it("has a zip property", function () {
-    assert.deepStrictEqual(
-      typeof person.address.zip,
-      "string",
-      "person should have an address property that has a zip property that is a string"
-    );
-  });
-
-  it("has a street property", function () {
-    assert.deepStrictEqual(
-      typeof person.address.street,
-      "string",
-      "person should have an address property that has a street property that is a string"
-    );
-  });
+test("removeHobby is a function", function () {
+  assert.deepStrictEqual(
+    typeof removeHobby,
+    "function",
+    "removeHobby should be a function"
+  );
 });
 
-describe("giveBirthday", function () {
-  it("is a function", function () {
-    assert.deepStrictEqual(
-      typeof giveBirthday,
-      "function",
-      "giveBirthday should be a function"
-    );
-  });
+test("addHobby adds a hobby to the hobbies array", function () {
+  const examplePerson1 = {
+    hobbies: ["fishing", "hiking"],
+  };
 
-  it("increments the age property of the person object", function () {
-    const examplePerson1 = {
-      age: 51,
-    };
+  const examplePerson2 = {
+    hobbies: ["diving", "hiking", "camping"],
+  };
 
-    const examplePerson2 = {
-      age: 25,
-    };
+  addHobby(examplePerson1, "camping");
+  assert.deepStrictEqual(
+    examplePerson1.hobbies,
+    ["fishing", "hiking", "camping"],
+    "addHobby should add a hobby to the hobbies array"
+  );
 
-    giveBirthday(examplePerson1);
-    assert.deepStrictEqual(
-      examplePerson1.age,
-      52,
-      "giveBirthday should increment the age property of the person object by 1"
-    );
-
-    giveBirthday(examplePerson2);
-    assert.deepStrictEqual(
-      examplePerson2.age,
-      26,
-      "giveBirthday should increment the age property of the person object by 1"
-    );
-  });
+  addHobby(examplePerson2, "fishing");
+  assert.deepStrictEqual(
+    examplePerson2.hobbies,
+    ["diving", "hiking", "camping", "fishing"],
+    "addHobby should add a hobby to the hobbies array"
+  );
 });
 
-describe("addHobby", function () {
-  it("is a function", function () {
-    assert.deepStrictEqual(
-      typeof addHobby,
-      "function",
-      "addHobby should be a function"
-    );
-  });
-
-  it("adds a hobby to the hobbies array", function () {
-    const examplePerson1 = {
-      hobbies: ["fishing", "hiking"],
-    };
-
-    const examplePerson2 = {
-      hobbies: ["diving", "hiking", "camping"],
-    };
-
-    addHobby(examplePerson1, "camping");
-    assert.deepStrictEqual(
-      examplePerson1.hobbies,
-      ["fishing", "hiking", "camping"],
-      "addHobby should add a hobby to the hobbies array"
-    );
-
-    addHobby(examplePerson2, "fishing");
-    assert.deepStrictEqual(
-      examplePerson2.hobbies,
-      ["diving", "hiking", "camping", "fishing"],
-      "addHobby should add a hobby to the hobbies array"
-    );
-  });
+test("addHobby is a function", function () {
+  assert.deepStrictEqual(
+    typeof addHobby,
+    "function",
+    "addHobby should be a function"
+  );
 });
 
-describe("removeHobby", function () {
-  it("is a function", function () {
-    assert.deepStrictEqual(
-      typeof removeHobby,
-      "function",
-      "removeHobby should be a function"
-    );
-  });
+test("giveBirthday increments the age property of the person object", function () {
+  const examplePerson1 = {
+    age: 51,
+  };
 
-  it("removes a hobby from the hobbies array", function () {
-    const examplePerson1 = {
-      hobbies: ["fishing", "hiking", "camping"],
-    };
+  const examplePerson2 = {
+    age: 25,
+  };
 
-    const examplePerson2 = {
-      hobbies: ["diving", "hiking", "camping", "fishing"],
-    };
+  giveBirthday(examplePerson1);
+  assert.deepStrictEqual(
+    examplePerson1.age,
+    52,
+    "giveBirthday should increment the age property of the person object by 1"
+  );
 
-    removeHobby(examplePerson1, "hiking");
-    assert.deepStrictEqual(
-      examplePerson1.hobbies,
-      ["fishing", "camping"],
-      "removeHobby should remove a hobby from the hobbies array"
-    );
-
-    removeHobby(examplePerson2, "diving");
-    assert.deepStrictEqual(
-      examplePerson2.hobbies,
-      ["hiking", "camping", "fishing"],
-      "removeHobby should remove a hobby from the hobbies array"
-    );
-  });
+  giveBirthday(examplePerson2);
+  assert.deepStrictEqual(
+    examplePerson2.age,
+    26,
+    "giveBirthday should increment the age property of the person object by 1"
+  );
 });
 
-describe("changeAddress", function () {
-  it("is a function", function () {
-    assert.deepStrictEqual(
-      typeof changeAddress,
-      "function",
-      "changeAddress should be a function"
-    );
-  });
+test("giveBirthday is a function", function () {
+  assert.deepStrictEqual(
+    typeof giveBirthday,
+    "function",
+    "giveBirthday should be a function"
+  );
+});
 
-  it("changes the address of the person object", function () {
-    const examplePerson1 = {
-      address: {
-        street: "123 Main St",
-        city: "Anytown",
-        state: "NY",
-        zip: "12345",
-      },
-    };
+test("person.address has a zip property that is a string", function () {
+  assert.deepStrictEqual(
+    typeof person.address.zip,
+    "string",
+    "person's address property should have a zip property that is a string"
+  );
+});
 
-    const examplePerson2 = {
-      address: {
-        street: "456 Elm St",
-        city: "Othertown",
-        state: "CA",
-        zip: "54321",
-      },
-    };
+test("person.address has a state property that is a string", function () {
+  assert.deepStrictEqual(
+    typeof person.address.state,
+    "string",
+    "person's address property should have a state property that is a string"
+  );
+});
 
-    changeAddress(examplePerson1, "789 Maple St", "Sometown", "FL", "54321");
-    assert.deepStrictEqual(
-      examplePerson1.address,
-      {
-        street: "789 Maple St",
-        city: "Sometown",
-        state: "FL",
-        zip: "54321",
-      },
-      "changeAddress should change the address of the person object"
-    );
+test("person.address has a city property that is a string", function () {
+  assert.deepStrictEqual(
+    typeof person.address.city,
+    "string",
+    "person's address property should have a city property that is a string"
+  );
+});
 
-    changeAddress(examplePerson2, "987 Oak St", "Anothertown", "TX", "67890");
-    assert.deepStrictEqual(
-      examplePerson2.address,
-      {
-        street: "987 Oak St",
-        city: "Anothertown",
-        state: "TX",
-        zip: "67890",
-      },
-      "changeAddress should change the address of the person object"
-    );
-  });
+test("person.address has a street property that is a string", function () {
+  assert.deepStrictEqual(
+    typeof person.address.street,
+    "string",
+    "person's address property should have a street property that is a string"
+  );
+});
+
+test("person has an address property", function () {
+  assert.deepStrictEqual(
+    typeof person.address,
+    "object",
+    "person should have an address property that is an object"
+  );
+});
+
+test("person has a hobbies property that is an array", function () {
+  assert.deepStrictEqual(
+    Array.isArray(person.hobbies),
+    true,
+    "person should have an hobbies property that is an array"
+  );
+});
+
+test("person has an age property that is a number", function () {
+  assert.deepStrictEqual(
+    typeof person.age,
+    "number",
+    "person should have an age property that is a number"
+  );
+});
+
+test("person has an email property that is a string", function () {
+  assert.deepStrictEqual(
+    typeof person.email,
+    "string",
+    "person should have an email property that is a string"
+  );
+});
+
+test("person is an object", function () {
+  assert.deepStrictEqual(typeof person, "object", "person should be an object");
+});
+
+test("fullName has two words", function () {
+  assert.deepStrictEqual(
+    fullName.split(" ").length,
+    2,
+    "fullName should be a string with two words separated by a space"
+  );
+});
+
+test("fullname holds a string", function () {
+  assert.deepStrictEqual(
+    typeof fullName,
+    "string",
+    "The variable fullName either doesn't exist or is not a string."
+  );
 });
