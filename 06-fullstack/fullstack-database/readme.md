@@ -1,7 +1,5 @@
 # Fullstack CRUD app
 
-<!-- NO SNIPPETS VERSION NO SNIPPETS VERSION NO SNIPPETS VERSION NO SNIPPETS VERSION NO SNIPPETS VERSION NO SNIPPETS VERSION -->
-
 It's time to put all of this course's knowledge together to create a fullstack application! In this lesson, we will create a Fullstack application by creating the back-end and front-end separately. They will communicate via URL requests, and will be in a ready-to-deploy state by the end of it.
 
 ## Overview
@@ -2044,3 +2042,4 @@ Now that it works, **CONGRATULATIONS!!** You've completed a MERN-stack applicati
 - The front end is providing a UI for a user to navigate the application
 
 Have fun with this application and celebrate!
+

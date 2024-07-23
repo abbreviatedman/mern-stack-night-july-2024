@@ -536,7 +536,7 @@ useEffect(() => {
   setUrl(
     "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Lc6mCmy8pmn55pfWyTeOUCytfdZvsJsUqRhtowWL"
   );
-  setLoading(false);
+  setLoading(true);
 }, []);
 ```
 
@@ -556,7 +556,8 @@ function Gallery() {
     setUrl(
       "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Lc6mCmy8pmn55pfWyTeOUCytfdZvsJsUqRhtowWL"
     );
-    setLoading(false);
+
+    setLoading(true);
   }, []);
 
   return (

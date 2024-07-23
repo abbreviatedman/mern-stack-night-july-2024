@@ -153,7 +153,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 ```
 
-30. Start up the server again with command `npm run dev`
+    30. Start up the server again with command `npm run dev`
 
 Now you should at least see the data in the console of your browser
 

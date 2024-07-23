@@ -273,7 +273,7 @@ useEffect(() => {
 useEffect(() => {
   //Runs on the first render
   //And any time any dependency value changes
-}, [prop, state]);
+}, [props, state]);
 ```
 
 To fix this issue, let's only run this effect on the initial render.

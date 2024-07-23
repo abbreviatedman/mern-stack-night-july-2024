@@ -17,7 +17,7 @@ Before we start diving into the advanced features of React Router, I first want 
 
 Once you have this library there are three things you need to do in order to use React Router.
 
-1. 1. Setup your router
+1. 1. Set up your router
 1. 2. Define your routes
 1. 3. Handle navigation
 
@@ -47,7 +47,7 @@ root.render(
 );
 ```
 
-Generally you will import your router in the index.js page of your application and it will wrap your App component. The router works just like a context in React and provides all the necessary information to your application so you can do routing and use all the custom hooks from React Router.
+Generally you will import your router in the index.js page of your application and it will wrap your App component. The router provides all the necessary information to your application so you can do routing and use all the custom hooks from React Router.
 
 OPTIONAL - You might also see in other applications that use React Router, on the `index.js` they are not wrapping the `App` component in the `BrowserRouter` component. This can happen, but on `App.js` this is an example of how it would be imported:
 
@@ -354,7 +354,7 @@ Now if this is all you could do with nested routes it would be only marginally u
 
 ### 2. 4. Shared Layouts
 
-Let's imagine that we want to render a nav section with links to each game as well the new game form from any of our game pages. To do this normally we would need to make a shared component to store this navigation, and then import that into every single game related component. This is a bit of a pain, though, so React Router created its own solution to solve this problem. If you pass an `element` prop to a parent route it will render that component for every single child `Route` which means you can put a shared nav or other shared components on every child page with ease.
+Let's imagine that we want to render a nav section with links to each game as well the new game form from any of our game pages. To do this normally we would need to make a shared component to store this navigation, and then import that into every single game related component. This is a bit of a pain, though, so React Router created its own solution to solve this problem. If you pass an `element` prop to a parent route it will render that component for every single child `Route`, which means you can put a shared nav or other shared components on every child page with ease.
 
 - Modify the routes on `App.js`:
 
